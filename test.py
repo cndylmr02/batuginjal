@@ -21,7 +21,11 @@ st.write("""
 #### Dengan 4 Pilihan Metode Klasifikasi
 ###### Mana yang terbaik?
 """)
-
+st.write("""
+###### Dataset diambil dari halaman https://www.kaggle.com/datasets/vuppalaadithyasairam/kidney-stone-prediction-based-on-urine-analysis
+###### Untuk Tipe Datanya sendiri berupa tipe data Numerik
+###### Data tersebut berisi hasil Analisis dari tes Urine dimana terdapat atribut atau fitur seperti gravity, ph, osmo, cond, urea, calc, dan terdapat target yang berisi hasil klasifikasinya 
+""")
 # Dataset
 dataset = pd.read_excel(r"data.xlsx")
 
@@ -142,7 +146,7 @@ with col2:
 # Button Predict
 diagnose = ''
 if st.button("Prediksi"):
-    process_data = [[float(age), float(glukosa), float(tensi), float(kulit), float(insulin), float(bmi)]]
+    process_data = [[float(gravity), float(ph), float(osmo), float(cond), float(urea), float(calc)]]
     process_data = min_max_scaler.fit_transform(process_data)
     predict_DM = algo.predict(process_data)
     if predict_DM[0] == 1:
