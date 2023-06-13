@@ -16,7 +16,7 @@ from sklearn.metrics import precision_recall_curve
 from sklearn.preprocessing import MinMaxScaler
 
 #Title
-st.title('GUI Prediksi Diabetes Mellitus')
+st.title('Prediksi Batu Ginjal Berdasarkan Analisis Urine ')
 st.write("""
 #### Dengan 4 Pilihan Metode Klasifikasi
 ###### Mana yang terbaik?
