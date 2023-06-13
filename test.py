@@ -61,7 +61,7 @@ def tambah_parameter(nama_algoritma):
     if nama_algoritma == 'KNN':
         metrics = st.sidebar.selectbox(
             'Pilih Metrics',
-            ('euclidean', 'manhattan', 'minkowski')
+            ('euclidean', 'entropy', 'probability')
         )
         params['metrics_select'] = metrics
         K = st.sidebar.slider ('K', 1, 10)
