@@ -22,6 +22,7 @@ st.title('KELOMPOK 9')
 #### Laili Nur Afifah (210411100174)
 #### Nur Anisa (210411100185)
 #### Fiza Ayu Rahma Sari (210411100215)
+""")
 st.title('Prediksi Batu Ginjal Berdasarkan Analisis Urine ')
 st.write("""
 #### Dengan 4 Pilihan Metode Klasifikasi
