@@ -27,7 +27,7 @@ st.write("""
 ###### Data tersebut berisi hasil Analisis dari tes Urine dimana terdapat atribut atau fitur seperti gravity, ph, osmo, cond, urea, calc, dan terdapat target yang berisi hasil klasifikasinya 
 """)
 # Dataset
-dataset = pd.read_excel(r"data.xlsx")
+dataset = pd.read_csv(r"data.csv")
 
 st.write('')
 st.write('## Dataset')
