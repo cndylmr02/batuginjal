@@ -19,7 +19,6 @@ from sklearn.preprocessing import MinMaxScaler
 st.title('Prediksi Batu Ginjal Berdasarkan Analisis Urine ')
 st.write("""
 #### Dengan 4 Pilihan Metode Klasifikasi
-###### Mana yang terbaik?
 """)
 st.write("""
 ###### Dataset diambil dari halaman https://www.kaggle.com/competitions/playground-series-s3e12/data
