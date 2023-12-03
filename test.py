@@ -22,7 +22,7 @@ st.write("""
 ###### Mana yang terbaik?
 """)
 st.write("""
-###### Dataset diambil dari halaman https://www.kaggle.com/datasets/vuppalaadithyasairam/kidney-stone-prediction-based-on-urine-analysis
+###### Dataset diambil dari halaman https://www.kaggle.com/competitions/playground-series-s3e12/data
 ###### Untuk Tipe Datanya sendiri berupa tipe data Numerik
 ###### Data tersebut berisi hasil Analisis dari tes Urine dimana terdapat atribut atau fitur seperti gravity, ph, osmo, cond, urea, calc, dan terdapat target yang berisi hasil klasifikasinya 
 """)
