@@ -16,6 +16,12 @@ from sklearn.metrics import precision_recall_curve
 from sklearn.preprocessing import MinMaxScaler
 
 #Title
+st.title('KELOMPOK 9')
+("""
+#### Cindy Laundiya Maretha (210411100037)
+#### Laili Nur Afifah (210411100174)
+#### Nur Anisa (210411100185)
+#### Fiza Ayu Rahma Sari (210411100215)
 st.title('Prediksi Batu Ginjal Berdasarkan Analisis Urine ')
 st.write("""
 #### Dengan 4 Pilihan Metode Klasifikasi
