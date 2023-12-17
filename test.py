@@ -152,7 +152,7 @@ with col2:
 # Button Predict
 diagnose = ''
 if st.button("Prediksi"):
-    process_data = [[float(gravity), float(ph), float(osmo), float(cond), float(urea), float(calc)]]
+    process_data = [[float(id), float(gravity), float(ph), float(osmo), float(cond), float(urea), float(calc)]]
     process_data = min_max_scaler.fit_transform(process_data)
     predict_DM = algo.predict(process_data)
     if predict_DM[0] == 1:
