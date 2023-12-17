@@ -44,8 +44,8 @@ st.write('## Missing Value')
 st.write(dataset.isna().sum())
 
 
-fitur = dataset[['id', 'gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
-fitur = dataset.iloc[:, :7]
+fitur = dataset[['gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
+fitur = dataset.iloc[:, :6]
 target = dataset['target']
 
 
@@ -141,13 +141,13 @@ st.write('# Prediksi Data Baru')
 col1, col2 = st.columns(2)
 
 with col1:
-    age = st.text_input("gravity")
-    tensi = st.text_input("ph (4 - 8)")
-    insulin = st.text_input(" osmo (100 - 1200)")
+    gravity = st.text_input("gravity")
+    ph = st.text_input("ph (4 - 8)")
+    osmo = st.text_input(" osmo (100 - 1200)")
 with col2:
-    glukosa = st.text_input("cond (5 - 40)")
-    kulit = st.text_input("urea (10 - 550)")
-    bmi = st.text_input("calc (0 - 15)")
+    cond = st.text_input("cond (5 - 40)")
+    urea = st.text_input("urea (10 - 550)")
+    calc = st.text_input("calc (0 - 15)")
 
 # Button Predict
 predicted_class = ''
