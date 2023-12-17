@@ -156,7 +156,7 @@ if st.button("Prediksi"):
     process_data = min_max_scaler.fit_transform(process_data)
     predict_DM = algo.predict(process_data)
     if predict_DM[0] == 1:
-        predicted_class = '0'
+        predicted_class = 'negatif'
     elif predict_DM[0] == 0:
-        predicted_class = '1'
+        predicted_class = 'positif'
     st.success(predicted_class)
