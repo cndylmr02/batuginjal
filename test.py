@@ -150,13 +150,13 @@ with col2:
     bmi = st.text_input("calc (0 - 15)")
 
 # Button Predict
-diagnose = ''
+predicted_class = ''
 if st.button("Prediksi"):
-    process_data = [[float(id), float(gravity), float(ph), float(osmo), float(cond), float(urea), float(calc)]]
+    process_data = [[float(gravity), float(ph), float(osmo), float(cond), float(urea), float(calc)]]
     process_data = min_max_scaler.fit_transform(process_data)
     predict_DM = algo.predict(process_data)
     if predict_DM[0] == 1:
-        diagnose = '0'
+        predicted_class = '0'
     elif predict_DM[0] == 0:
-        diagnose = '1'
-    st.success(diagnose)
+        predicted_class = '1'
+    st.success(predicted_class)
