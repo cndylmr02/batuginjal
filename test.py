@@ -67,11 +67,12 @@ def tambah_parameter(nama_algoritma):
     if nama_algoritma == 'KNN':
         metrics = st.sidebar.selectbox(
             'Pilih Metrics',
-            ('euclidean', 'entropy', 'probability')
+            ('euclidean', 'manhattan', 'minkowski')
         )
         params['metrics_select'] = metrics
         K = st.sidebar.slider ('K', 1, 10)
         params['K'] = K
+
     elif nama_algoritma == 'Decision Tree':
         max_depth = st.sidebar.slider('max_depth', 2, 15)
         params['max_depth'] = max_depth
