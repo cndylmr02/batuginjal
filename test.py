@@ -45,7 +45,7 @@ st.write(dataset.isna().sum())
 
 
 fitur = dataset[['gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
-fitur = dataset.iloc[:, :6]
+fitur = fitur.iloc[:, :6]
 target = dataset['target']
 
 
