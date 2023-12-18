@@ -44,8 +44,8 @@ st.write('## Missing Value')
 st.write(dataset.isna().sum())
 
 
-fitur = dataset[['gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
-fitur = fitur.iloc[:, :6]
+fitur = dataset[['id', 'gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
+fitur = dataset.iloc[:2, :6]
 target = dataset['target']
 
 
