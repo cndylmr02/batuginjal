@@ -44,15 +44,16 @@ st.write('## Missing Value')
 st.write(dataset.isna().sum())
 
 
-fitur = dataset[['gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
-fitur = dataset.iloc[:, :6]
+fitur = dataset[['id', 'gravity', 'ph', 'osmo', 'cond', 'urea', 'calc', 'target']]
+fitur = dataset.iloc[:, :7]
 target = dataset['target']
 
 
 # Normalisasi Data
 st.write("## Dataset Normalisasi")
+fitur_tanpa_target = fitur.drop('id', axis=1)
 min_max_scaler = MinMaxScaler(feature_range=(0, 1))
-fitur = min_max_scaler.fit_transform(fitur)
+fitur = min_max_scaler.fit_transform(fitur_tanpa_target)
 st.dataframe(fitur)
 
 #Tambah Klasifikasi
