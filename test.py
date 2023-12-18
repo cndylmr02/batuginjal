@@ -51,10 +51,10 @@ target = dataset['target']
 
 # Normalisasi Data
 st.write("## Dataset Normalisasi")
-fitur_tanpa_target = fitur.drop('id', axis=1)
+fitur_tanpa_id = fitur.drop('id', axis=1)
 min_max_scaler = MinMaxScaler(feature_range=(0, 1))
-fitur = min_max_scaler.fit_transform(fitur_tanpa_target)
-st.dataframe(fitur)
+fitur_baru = min_max_scaler.fit_transform(fitur_tanpa_id)
+st.dataframe(fitur_baru)
 
 #Tambah Klasifikasi
 algoritma = st.sidebar.selectbox(
@@ -96,7 +96,7 @@ algo = pilih_klasifikasi(algoritma, params)
 
 ### PROSES KLASIFIKASI ###
 
-xTrain, xTest, yTrain, yTest = train_test_split(fitur, target, test_size=0.2, random_state=1234)
+xTrain, xTest, yTrain, yTest = train_test_split(fitur_baru, target, test_size=0.2, random_state=1234)
 
 algo.fit(xTrain, yTrain)
 pred = algo.predict(xTest)
